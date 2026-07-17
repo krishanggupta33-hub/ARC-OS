@@ -85,3 +85,66 @@ body {
     flex-direction: column;
     border-radius: 4px;
 }
+
+.title-bar {
+    background: rgba(79, 172, 254, 0.15);
+    padding: 8px 15px;
+    cursor: grab;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid #4facfe;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-bar:active { cursor: grabbing; }
+.close-btn { cursor: pointer; }
+.close-btn:hover { color: #ff4757; }
+.content { padding: 20px; text-shadow: 0 0 5px #4facfe; line-height: 1.6; }
+
+.taskbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(4, 15, 30, 0.85);
+    border-top: 1px solid #4facfe;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+.start-btn { font-weight: bold; letter-spacing: 2px; color: #010409; background: #4facfe; padding: 6px 15px; border-radius: 3px; box-shadow: 0 0 10px rgba(79, 172, 254, 0.5); cursor: pointer; }
+.taskbar-icons { display: flex; gap: 15px; position: absolute; left: 50%; transform: translateX(-50%); }
+.taskbar-icon { width: 35px; height: 35px; border: 1px solid #4facfe; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: bold; cursor: pointer; background: rgba(79, 172, 254, 0.1); transition: all 0.2s ease; }
+.taskbar-icon:hover { background: rgba(79, 172, 254, 0.3); box-shadow: 0 0 10px rgba(79, 172, 254, 0.5); transform: translateY(-2px); }
+.taskbar-time { text-align: right; font-size: 12px; line-height: 1.3; color: #fff; }
+#tb-time { font-weight: bold; font-size: 14px; }
+
+.tasks-layout { display: flex; flex-direction: column; gap: 15px; }
+.task-input-area { display: flex; gap: 10px; }
+#new-task { flex: 1; background: rgba(4, 15, 30, 0.8); border: 1px solid #4facfe; color: #4facfe; font-family: 'Consolas', 'Courier New', monospace; padding: 8px; outline: none; }
+.task-input-area button { background: rgba(4, 15, 30, 0.8); border: 1px solid #4facfe; color: #4facfe; font-family: 'Consolas', 'Courier New', monospace; padding: 8px 15px; cursor: pointer; font-weight: bold; }
+.task-input-area button:hover { background: rgba(79, 172, 254, 0.3); }
+.task-item { display: flex; justify-content: space-between; padding: 8px; background: rgba(79, 172, 254, 0.1); margin-bottom: 5px; border-left: 3px solid #4facfe; }
+
+.calc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+#calc-screen { grid-column: span 4; background: rgba(4, 15, 30, 0.8); border: 1px solid #4facfe; color: #fff; padding: 15px; text-align: right; font-size: 24px; font-family: 'Consolas', monospace; margin-bottom: 10px; }
+.calc-grid button { padding: 15px; background: rgba(79, 172, 254, 0.1); border: 1px solid #4facfe; color: #4facfe; font-size: 18px; font-weight: bold; font-family: 'Consolas', monospace; cursor: pointer; }
+.calc-grid button:hover { background: rgba(79, 172, 254, 0.3); }
+
+.timer-layout { text-align: center; }
+#timer-display { font-size: 60px; font-weight: bold; letter-spacing: 5px; margin-bottom: 20px; color: #fff; text-shadow: 0 0 15px #4facfe; }
+.timer-controls { display: flex; gap: 10px; justify-content: center; }
+#timer-input { width: 60px; background: rgba(4, 15, 30, 0.8); border: 1px solid #4facfe; color: #4facfe; padding: 8px; font-family: monospace; text-align: center; }
+.timer-controls button { background: rgba(79, 172, 254, 0.1); border: 1px solid #4facfe; color: #4facfe; padding: 8px 15px; cursor: pointer; font-weight: bold; font-family: monospace; }
+.timer-controls button:hover { background: rgba(79, 172, 254, 0.3); }
+
+.large-clock-display { font-size: 45px; font-weight: bold; letter-spacing: 5px; text-align: center; color: #fff; text-shadow: 0 0 20px #4facfe; margin-top: 10px; }
+.large-date-display { font-size: 20px; text-align: center; letter-spacing: 3px; margin-top: 10px; opacity: 0.8; }
