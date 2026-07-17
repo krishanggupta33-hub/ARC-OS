@@ -119,3 +119,27 @@
             <div class="large-date-display" id="large-date">YYYY/MM/DD</div>
         </div>
     </div>
+
+    <div class="taskbar">
+        <div class="start-btn">ARC</div>
+        <div class="taskbar-icons">
+            <div class="taskbar-icon" onclick="toggleApp('terminal-app')">T_</div>
+            <div class="taskbar-icon" onclick="toggleApp('tasks-app')">O_</div>
+            <div class="taskbar-icon" onclick="toggleApp('calc-app')">+-</div>
+            <div class="taskbar-icon" onclick="toggleApp('timer-app')">00</div>
+            <div class="taskbar-icon" onclick="toggleApp('clock-app')">CLK</div>
+        </div>
+        <div class="taskbar-time" id="taskbar-clock">
+            <div id="tb-time">00:00 AM</div>
+            <div id="tb-date">YYYY/MM/DD</div>
+        </div>
+    </div>
+
+    <script src="core.js"></script>
+    <script src="apps/terminal.js"></script>
+    <script src="apps/tasks.js"></script>
+    <script src="apps/calc.js"></script>
+    <script src="apps/timer.js"></script>
+    <script src="apps/clock.js"></script>
+</body>
+</html>
