@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';">
+    <title>ARC OS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hud-ring"></div>
+
+    <div class="desktop-icons">
+        <div class="desktop-icon" onclick="toggleApp('terminal-app')">
+            <div class="icon-img">T_</div>
+            <span>Terminal</span>
+        </div>
+        <div class="desktop-icon" onclick="toggleApp('tasks-app')">
+            <div class="icon-img">O_</div>
+            <span>Tasks</span>
+        </div>
+        <div class="desktop-icon" onclick="toggleApp('calc-app')">
+            <div class="icon-img">+-</div>
+            <span>Calc</span>
+        </div>
+        <div class="desktop-icon" onclick="toggleApp('timer-app')">
+            <div class="icon-img">00</div>
+            <span>Timer</span>
+        </div>
+        <div class="desktop-icon" onclick="toggleApp('clock-app')">
+            <div class="icon-img">CLK</div>
+            <span>Clock</span>
+        </div>
+        <div class="desktop-icon" onclick="exitOS()">
+            <div class="icon-img" style="color: #ff4757; border-color: #ff4757;">[X]</div>
+            <span>Exit OS</span>
+        </div>
+    </div>
+
+    <div class="window" id="terminal-app" style="top: 100px; left: 200px; width: 450px;">
+        <div class="title-bar">
+            <span>SYS_TERMINAL // CORE</span>
+            <span class="close-btn" onclick="this.parentElement.parentElement.style.display='none'">[X]</span>
+        </div>
+        <div class="content" id="terminal-content" style="display: flex; flex-direction: column; overflow-y: auto; height: 350px;">
+            <div id="terminal-output">
+                <p>> ARC OS is online. CMD hook active.</p>
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                <span>></span>
+                <input type="text" id="cmd-input" style="background: transparent; border: none; color: #4facfe; font-family: 'Consolas', 'Courier New', monospace; width: 100%; outline: none;" autocomplete="off" spellcheck="false" autofocus>
+            </div>
+        </div>
+    </div>
