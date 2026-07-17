@@ -52,3 +52,70 @@
             </div>
         </div>
     </div>
+
+    <div class="window" id="tasks-app" style="top: 100px; left: 700px; width: 350px; display: none;">
+        <div class="title-bar">
+            <span>SYS_OBJECTIVES // TASKS</span>
+            <span class="close-btn" onclick="this.parentElement.parentElement.style.display='none'">[X]</span>
+        </div>
+        <div class="content tasks-layout">
+            <div class="task-input-area">
+                <input type="text" id="new-task" placeholder="Enter new directive...">
+                <button onclick="addTask()">ADD</button>
+            </div>
+            <div id="task-list"></div>
+        </div>
+    </div>
+
+    <div class="window" id="calc-app" style="top: 200px; left: 300px; width: 280px; display: none;">
+        <div class="title-bar">
+            <span>SYS_CALC // MATH</span>
+            <span class="close-btn" onclick="this.parentElement.parentElement.style.display='none'">[X]</span>
+        </div>
+        <div class="content calc-grid">
+            <input type="text" id="calc-screen" disabled value="">
+            <button onclick="appendCalc('7')">7</button>
+            <button onclick="appendCalc('8')">8</button>
+            <button onclick="appendCalc('9')">9</button>
+            <button onclick="appendCalc('/')">/</button>
+            <button onclick="appendCalc('4')">4</button>
+            <button onclick="appendCalc('5')">5</button>
+            <button onclick="appendCalc('6')">6</button>
+            <button onclick="appendCalc('*')">*</button>
+            <button onclick="appendCalc('1')">1</button>
+            <button onclick="appendCalc('2')">2</button>
+            <button onclick="appendCalc('3')">3</button>
+            <button onclick="appendCalc('-')">-</button>
+            <button onclick="clearCalc()" style="color: #ff4757;">C</button>
+            <button onclick="appendCalc('0')">0</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendCalc('+')">+</button>
+        </div>
+    </div>
+
+    <div class="window" id="timer-app" style="top: 250px; left: 650px; width: 300px; display: none;">
+        <div class="title-bar">
+            <span>SYS_TIMER // CLOCK</span>
+            <span class="close-btn" onclick="this.parentElement.parentElement.style.display='none'">[X]</span>
+        </div>
+        <div class="content timer-layout">
+            <div id="timer-display">00:00</div>
+            <div class="timer-controls">
+                <input type="number" id="timer-input" placeholder="Min" min="1" max="99">
+                <button onclick="startTimer()">START</button>
+                <button onclick="stopTimer()">STOP</button>
+                <button onclick="resetTimer()">RESET</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="window" id="clock-app" style="top: 300px; left: 450px; width: 400px; display: none;">
+        <div class="title-bar">
+            <span>SYS_CLOCK // TIME</span>
+            <span class="close-btn" onclick="this.parentElement.parentElement.style.display='none'">[X]</span>
+        </div>
+        <div class="content">
+            <div class="large-clock-display" id="large-clock">00:00:00 AM</div>
+            <div class="large-date-display" id="large-date">YYYY/MM/DD</div>
+        </div>
+    </div>
